@@ -62,6 +62,34 @@
         print "Não é um boolean";
     endif;
 
+
+    print "<hr>";
+
+
+    /************ COMPOSTOS ************/
+
+    // array
+    $listaMercado = array("pão", "café", "presuno", "queijo");
+    var_dump($listaMercado);
+
+
+    print "<hr>";
+
+
+    // object
+    class Cliente {
+        public $nome;
+        public function atribuirNome($nome) {
+            $this->$nome = $nome;
+        }
+    }
+
+    // criar nobo cliente
+    $cliente = new Cliente();
+    $cliente->atribuirNome("João da Silva");
+    var_dump($cliente);
+
+
     ?>
 
 
