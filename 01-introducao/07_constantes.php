@@ -25,7 +25,7 @@
     define('ESTADO', 'RS');
 
     // Concatenando strings
-    print "Meu nome é NOME. Eu moro em CIDADE - ESTADO."; // Erraado
+    print "Meu nome é NOME. Eu moro em {CIDADE} - {ESTADO}."; // Erraado
     print '<br><br>';
     print "Meu nome é ".NOME.". Eu moro em ".CIDADE." - ".ESTADO."."; // Certo
 
