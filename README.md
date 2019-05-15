@@ -1,1 +1,5 @@
-# estudando-php
+# Repositório de estdo de PHP
+
+Marcelo Pereira
+
+
