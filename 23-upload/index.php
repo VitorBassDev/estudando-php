@@ -22,7 +22,7 @@
         $extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
 
         // Verifica se a extensão existe no array de formatos prmitidos
-        if(in_array($extensao, $formatosPermitidos)):
+        if(!in_array($extensao, $formatosPermitidos)):
             $pasta = "arquivos/";
             $temporario = $_FILES['arquivo']['tmp_name'];
             $novoNome = uniqid().".$extensao";
