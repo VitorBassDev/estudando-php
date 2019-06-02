@@ -12,8 +12,6 @@
 
 <h1 class="my-5">Estudando PHP - Upload de Arquivos</h1>
 
-
-
 <?php
     // Verificamos se o usuário clicou no botão enviar
     if(isset($_POST['enviar-formulario'])): 
