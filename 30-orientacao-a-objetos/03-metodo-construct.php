@@ -22,13 +22,10 @@ class Login {
     private $email;
     private $senha;
 
-    public function getNome() {
-        return $this->nome;
-    }
 
     // Método construtor
     public function __construct($nome, $email, $senha) {
-        $this->nome = $nome;
+        $this->setNome($nome);
         $this->setEmail($email);
         $this->setSenha($senha);
     }
@@ -73,7 +70,7 @@ class Login {
 }
 
 // Instanciar novo objeto da classe "Login"
-$acesso1 = new Login("João da Silva", "teste@gmail.com", "1234");
+$acesso1 = new Login("João da Silva", "teste@gmail.commmmmm", "12344444");
 
 var_dump($acesso1);
 print "<br><br>";
@@ -90,7 +87,7 @@ print "<hr>";
 
 </div><!-- Fim container-->
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  ></script>
 </body>
