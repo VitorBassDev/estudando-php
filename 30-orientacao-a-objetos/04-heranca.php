@@ -50,10 +50,6 @@ class Moto extends Veiculo {
 
 }
 
-
-
-
-
 print "<br><br>";
 
 $carro1 = new Carro();
@@ -67,23 +63,15 @@ var_dump($carro1);
 
 print "<hr>";
 
-
 // Criando novo objeto
 $moto1 = new Moto();
 $moto1->Andar();
 print "<br>";
 $moto1->empinarMoto();
 
-
-
 print "<hr>";
 
-
 ?>
-
-
-
-
 
 </div><!-- Fim container-->
 
