@@ -1,5 +1,13 @@
+<!-- 
+    Estudando PHP
+    
+    Códigos comentados por Marcelo Pereira
+    https://github.com/marcelopoars
+    https://marcelopoars.github.io/
+ -->
+
 <!DOCTYPE html>
-<html lang="pt.br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,12 +60,14 @@
     // case
     // EXEMPLO 01
 
+    // Criamos uma variável
     $cor = "verde";
 
+    // Vamos criar vários casos, e testar se a cor é a mesma da variável
     switch ($cor):
         case 'vermelho':
-        print 'A cor é vermelho';
-        break;
+        print 'A cor é vermelho'; // Imprime se for verdade
+        break; // Sai do sistema se for verdade
 
         case 'azul':
         print 'A cor é azul';
@@ -66,7 +76,8 @@
         case 'verde':
         print 'A cor é verde';
         break;
-        
+        // Se nenhuma das opções acima forem verdade, 
+        // o caso "default" será verdade
         default:
         print 'Cor inválida';
         break;

@@ -1,5 +1,13 @@
+<!-- 
+    Estudando PHP
+    
+    Códigos comentados por Marcelo Pereira
+    https://github.com/marcelopoars
+    https://marcelopoars.github.io/
+ -->
+
 <!DOCTYPE html>
-<html lang="pt.br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,19 +31,22 @@
     $b = 20;
     $c = 22;
 
-    // (&& - and) - e
+    // Operador Lógico E (&& - and)
+    // Retorna VERDADEIRO se as duas expressões forem VERDADE
     var_dump(( $a == $b) and ( $b == $c ));
     print "<br><hr><br>";
 
-    // (|| - or) - ou
+    // Operador Lógico OU (|| - or)
+    // Retorna VERDADEIRO se uma pelo menos uma das expressões forem VERDADE
     var_dump(( $a == $b) or ( $b == $c ));
     print "<br><hr><br>";
 
-    // (xor) - "ou um, ou outro" (apenas um pode ser verdadeiro)
+    // Operador Lógico OU EXCLUSIVO (xor)
+    // Retorna VERDADEIRO aenas se uma das expressões forem VERDADE
     var_dump(( $a == $b) xor ( $b == $c ));
     print "<br><hr><br>";
 
-    // ( ! ) - Nega o resultado da expressão
+    // Operador Lógico NOT ( ! ) - Nega o resultado da expressão
     var_dump( !( $a == $b ) );
     print "<br><hr><br>";
 

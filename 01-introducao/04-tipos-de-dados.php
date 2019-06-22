@@ -1,5 +1,13 @@
+<!-- 
+    Estudando PHP
+    
+    Códigos comentados por Marcelo Pereira
+    https://github.com/marcelopoars
+    https://marcelopoars.github.io/
+ -->
+ 
 <!DOCTYPE html>
-<html lang="pt.br">
+<html lang="ptbr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +22,7 @@
     /************ ESCALARES ************/
 
     // string
-    $nome = 123;
+    $nome = "Olá. Meu nome é Marcelo.";
 
     // A função "var_dump" mostra mais informações sobre a variável
     var_dump($nome);
@@ -32,6 +40,7 @@
     $idade = 30;
     var_dump($idade);
 
+    // Verifica se a variável "$idade" é inteiro
     if(is_int($idade)):
         print "É inteiro";
     else:
@@ -44,6 +53,7 @@
     $taxaImposto = 1.5;
     var_dump($taxaImposto);
 
+    // Verifica se a variável é float
     if(is_float($taxaImposto)):
         print "É float";
     else:
@@ -55,7 +65,8 @@
     // boolean
     $ligado = false;
     var_dump($ligado);
-
+a
+    // Verifica se a variável é boolean
     if(is_bool($ligado)):
         print "É um boolean";
     else:
@@ -72,9 +83,7 @@
     $listaMercado = array("pão", "café", "presuno", "queijo");
     var_dump($listaMercado);
 
-
     print "<hr>";
-
 
     // object
     class Cliente {
@@ -89,10 +98,7 @@
     $cliente->atribuirNome("João da Silva");
     var_dump($cliente);
 
-
     ?>
 
-
-    
 </body>
 </html>

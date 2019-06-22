@@ -1,5 +1,13 @@
+<!-- 
+    Estudando PHP
+    
+    Códigos comentados por Marcelo Pereira
+    https://github.com/marcelopoars
+    https://marcelopoars.github.io/
+ -->
+
 <!DOCTYPE html>
-<html lang="pt.br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +21,12 @@
     <?php
 
     // *******************************
-    // Criando Funções
+    // FUNÇÕES EM PHP
 
+    /* Devemos sempre que possível, criar funções para realizar 
+       aquelas tarfas que se repetem. Assim reduzimos a quantidade
+       de código, além de facilitar a leitura e entendimento do mesmo.
+    */
 
     // Exemplo 01 - função "sem parâmetros"
     function imprimeNome() {
@@ -28,11 +40,12 @@
 
 
     // Exemplo 02 -função "com parâmetros"
+    // Neste caso ao chamar a função será necessário passar o nome
     function imprimeNome2($nome) {
         print $nome;
     }
 
-    // Invocando a função
+    // Invocando a função e passando o nome (sting)
     imprimeNome2("João da Silva");
 
     print "<br><hr><br>";

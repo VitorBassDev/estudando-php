@@ -1,5 +1,13 @@
+<!-- 
+    Estudando PHP
+    
+    Códigos comentados por Marcelo Pereira
+    https://github.com/marcelopoars
+    https://marcelopoars.github.io/
+ -->
+
 <!DOCTYPE html>
-<html lang="pt.br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +22,19 @@
     <!-- Tag de abertura do PHP -->
     <?php
 
-        // Comentário de 01 linha
+    // Comentário de 01 linha
 
-        /* Este é um comentário de 
-           várias linhas. */
-           
-        print "Meu nome é Marcelo Pereira";
+    /* Este é um comentário de 
+        várias linhas. */
+    
+    // Comando de impressão na tela "echo / print"
+    print "Meu nome é Marcelo Pereira";
 
-        print "<br>";
+    print "<br>"; // Adicionando uma quebra de linha
 
-        echo "Eu moro em Porto Alegre - RS";
+    print "<hr>"; // Adicionando uma linha horizontal
+
+    echo "Eu moro em Porto Alegre - RS";
     
     ?><!-- Tag de fechameto do PHP-->
 

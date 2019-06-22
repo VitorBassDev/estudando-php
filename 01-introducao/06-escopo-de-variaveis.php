@@ -1,5 +1,13 @@
+<!-- 
+    Estudando PHP
+    
+    Códigos comentados por Marcelo Pereira
+    https://github.com/marcelopoars
+    https://marcelopoars.github.io/
+ -->
+
 <!DOCTYPE html>
-<html lang="pt.br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,24 +20,24 @@
 
     <?php
 
-    // Desta fora não funciona (ESCOPO GLOBAL)
+    // Desta forma não funciona (ESCOPO GLOBAL)
     // $nome = "Chico";
     // function imprimeNome() {
     //     print $nome;
     //     print "<br>";
     // }
-    // imprimeNome();
+    // imprimeNome("Xuxa");
 
     // Exemplo 1 - Variável global
-    $nome = "Fulano";
+    $nome2 = "Fulano";
 
-    function imprimeNome() {
+    function imprimeNome2() {
         // definindo variável global
-        global $nome;
-        print $nome;
+        global $nome2;
+        print $nome2;
         print "<br>";
     }
-    imprimeNome();
+    imprimeNome2();
 
 
     // Exemplo 2 - 

@@ -1,5 +1,13 @@
+<!-- 
+    Estudando PHP
+    
+    Códigos comentados por Marcelo Pereira
+    https://github.com/marcelopoars
+    https://marcelopoars.github.io/
+ -->
+
 <!DOCTYPE html>
-<html lang="pt.br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +22,14 @@
     <?php
         // Forma 01 - Criando um Array
         $listaMercado = array("Arroz", "Feijão", "Maçã", "Carne");
+        // Pode-se quebrar linhas
+        $listaMercado2 = array(
+            "Arroz", 
+            "Feijão", 
+            "Maçã", 
+            "Carne" // Depois do último elemento NÃO vai virgula
+        );
+
         // Imprime todo array
         print_r($listaMercado);
 
@@ -40,6 +56,14 @@
         /////////////////////////////////
         // Outra forma de dfinir um Array
         $alunos = ["Maria", "João", "Pedro", "Fulano"];
+        // Podemos quebrar a linha
+        $alunos = [
+            "Maria", 
+            "João", 
+            "Pedro", 
+            "Fulano"
+        ];
+
         print_r($alunos);
 
         print('<br><hr><br>');
@@ -66,7 +90,11 @@
 
         /////////
         // Arrays Associativos (índices ou chaves são strings)
-        $pessoa = ["nome" => "Mrcelo", "cidade" => "Porto Aegre", "estado" => "RS"];
+        $pessoa = [
+            "nome" => "Mrcelo", 
+            "cidade" => "Porto Aegre", 
+            "estado" => "RS"
+        ];
         var_dump($pessoa);
         print('<br>'.$pessoa["cidade"]);
 
