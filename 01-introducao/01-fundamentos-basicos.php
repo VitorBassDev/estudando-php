@@ -31,14 +31,20 @@
     print "Meu nome é Marcelo Pereira";
 
     print "<br>"; // Adicionando uma quebra de linha
-
     print "<hr>"; // Adicionando uma linha horizontal
 
     echo "Eu moro em Porto Alegre - RS";
+
+    print "<br>"; // Adicionando uma quebra de linha
+    print "<hr>"; // Adicionando uma linha horizontal
     
+    //===================================================
+    // Verificando a versão do PHP instalado na máquina ou servidor
+    // Vamos utilizar a função "phpversion()"
+    print "Versão do PHP: ".phpversion();
+
+
     ?><!-- Tag de fechameto do PHP-->
 
-
-    
 </body>
 </html>
