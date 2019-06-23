@@ -23,61 +23,74 @@
 
     <?php
 
-    if (isset($_POST['enviar-formulario'])):
+    // Validações de formulário em PHP
 
-        // Array de erros
+    // Verifica "se existe" o índice "enviar" na superglobal $_POST
+    if (isset($_POST['enviar'])):
+        // Verificando se clicou no botão
+        // print '<div class="alert alert-success">Eviou</div>';
+
+        // Criando um array para armazenar os erros
         $erros = array();
         
+        // VALIDA NOME ********
         // Verifica se está vazio
         if(empty($_POST['nome'])):
-            $erros[] = '<div class="alert alert-danger" role="alert">Campo Nome: obrigatório</div>';
+            $erros[] = "Campo Nome: obrigatório";
         else:
             // Sanitize Filters
-            $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-            print $nome;
+            $newStr = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+            $nome = $newStr;
         endif;
 
+        // VALIDA EMAIL ********
         // Verifica se está vazio
         if(empty($_POST['email'])):
-            $erros[] = '<div class="alert alert-danger" role="alert">Campo Email: obrigatório</div>';
+            $erros[] = "Campo Email: obrigatório";
         else:
             // Sanitize Filters
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-            print $email;
+            // Verificar se está no de "formato email válido"
+                if(!$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)):
+                    $erros[] = "Email inválido";
+                endif;
         endif;
 
 
         // Imprimindo mensagens de erro
         if(!empty($erros)):
             foreach($erros as $erro):
-                print "$erro";
+                print '<div class="alert alert-danger" role="alert">'.$erro.'</div>';
             endforeach;
         else:
             print '<div class="alert alert-success" role="alert">Dados enviados com sucesso!</div>';
         endif;
     endif;
 
+
     ?>
 
     <form action="<?php print $_SERVER['PHP_SELF']; ?>" method="POST">
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-5">
             <label for="nome">Nome</label>
             <input type="text" class="form-control" name="nome" id="nome">
             </div>
 
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-5">
             <label for="email">Email</label>
             <input type="text" class="form-control" name="email" id="email">
             </div>
         </div>
-        <button class="btn btn-primary" type="submit" name="enviar-formulario">Enviar</button>
+        <button class="btn btn-primary" type="submit" name="enviar">Enviar</button>
         <button class="btn btn-danger" type="clear" name="limpar">Limpar</button>
     </form>
 
     <hr class="my-5">
 
-    </div><!-- Fim container-->
+    <?php var_dump($_POST); ?>
+   
+    </Campo><!-- Fim container-->
 
 <!-- JQuery / Popper / Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
