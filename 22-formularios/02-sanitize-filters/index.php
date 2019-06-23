@@ -39,8 +39,7 @@
             $erros[] = "Campo Nome: obrigatório";
         else:
             // Sanitize Filters
-            $newStr = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-            $nome = $newStr;
+            $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
         endif;
 
         // VALIDA EMAIL ********
@@ -67,10 +66,9 @@
         endif;
     endif;
 
-
     ?>
 
-    <form action="<?php print $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form action="" method="POST">
         <div class="form-row">
             <div class="form-group col-md-5">
             <label for="nome">Nome</label>
@@ -82,7 +80,7 @@
             <input type="text" class="form-control" name="email" id="email">
             </div>
         </div>
-        <button class="btn btn-primary" type="submit" name="enviar">Enviar</button>
+        <button class="btn btn-primary" type="submit" name="enviar" >Enviar</button>
         <button class="btn btn-danger" type="clear" name="limpar">Limpar</button>
     </form>
 
@@ -90,10 +88,10 @@
 
     <?php var_dump($_POST); ?>
    
-    </Campo><!-- Fim container-->
+    </div><!-- Fim container-->
 
 <!-- JQuery / Popper / Bootstrap -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  ></script>
 </body>
