@@ -27,16 +27,18 @@ mysqli_close($connect);
    
     <title>Estudando PHP - Sistema de login</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div class="container">
-    <h1 class="h3 mb-3 font-weight-normal text-center">Home</h1>
-    <h2 class="text-center">Olá <?php print $dados['nome'] ?></h2>
 
-    <a class="btn btn-danger btn-block my-5" href="logout.php" role="button">SAIR</a>
+        <h1 class="h3 mb-3 font-weight-normal text-center">Home</h1>
+        <h2 class="text-center">Olá <?php print $dados['nome'] ?></h2>
+
+        <a class="btn btn-danger my-5" href="logout.php" role="button">SAIR</a>
+
     </div>
 
     <!-- Optional JavaScript -->
