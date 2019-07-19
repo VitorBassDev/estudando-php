@@ -28,18 +28,21 @@ mysqli_close($connect);
     <title>Estudando PHP - Sistema de login</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <!-- CSS Style -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+    <!-- Início Container -->
     <div class="container">
 
-        <h1 class="h3 mb-3 font-weight-normal text-center">Home</h1>
-        <h2 class="text-center">Olá <?php print $dados['nome'] ?></h2>
+        <div class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal text-center">Home</h1>
+            <h2 class="text-center">Olá <?php print $dados['nome'] ?></h2>
+            <a class="btn btn-danger btn-block my-5" href="logout.php" role="button">SAIR</a>        
+        </div>
 
-        <a class="btn btn-danger my-5" href="logout.php" role="button">SAIR</a>
-
-    </div>
+    </div><!-- Fim container -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

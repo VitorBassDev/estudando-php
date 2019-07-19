@@ -1,19 +1,25 @@
 <?php
-// Conexão
+// Invocando a função de conexão com banco de dados
 require_once 'db_connect.php';
 
-// Sessão
+// Iniciando a Sessão
 session_start();
 
-// Botão ENVIAR
+// Verifica se o botão "Entrar" foi clicado
 if(isset($_POST['btn-entrar'])):
-    // Erros
+
+    // Criando array para armazenar os erros
     $erros = array();
+
+    // 
     $login = mysqli_escape_string($connect, $_POST['login']);
     $senha = mysqli_escape_string($connect, $_POST['senha']);
 
+    $_SESSION['login'] = 'login';
+    $_SESSION['senha'] = 'senha';
+
     if(empty($login) or empty($senha)):
-        $erros[] = '<div class="alert alert-danger" role="alert">O campo login/lenha precisa ser preenchido</div>';
+        $erros[] = 'O campo login/lenha precisa ser preenchido';
     else:
         $sql = "SELECT login FROM usuarios WHERE login = '$login'";
         $resultado = mysqli_query($connect, $sql);
@@ -30,11 +36,11 @@ if(isset($_POST['btn-entrar'])):
                 $_SESSION['id_usuario'] = $dados['id'];
                 header('Location: home.php');
             else:
-                $erros[] = '<div class="alert alert-danger" role="alert">Usuário e senha não conferem</div>';
+                $erros[] = 'Usuário e senha não conferem';
             endif;
 
         else:
-            $erros[] = '<div class="alert alert-danger" role="alert">Usuário não existe</div>';
+            $erros[] = 'Usuário não existe';
         endif;
     endif;
 endif;
@@ -51,11 +57,14 @@ endif;
     <title>Estudando PHP - Sistema de login</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <!-- CSS Style -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Início Container -->    
     <div class="container">
+
         <form class="form-signin my-5" action="<?php print $_SERVER['PHP_SELF']; ?>" method="POST">
             <h1 class="h3 mb-3 font-weight-normal text-center">Sistema de login</h1>
 
@@ -63,7 +72,7 @@ endif;
                 // Se huver erro - exibe o erro
                 if(!empty($erros)):
                     foreach($erros as $erro):
-                        print $erro;
+                        print '<div class="alert alert-danger">'.$erro.'</div>';
                     endforeach;
                 endif;
             ?>
@@ -72,7 +81,8 @@ endif;
             <input type="password" class="form-control" name="senha" placeholder="Senha">
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="btn-entrar">Entrar</button>
         </form>
-    </div>
+
+    </div><!-- Fim container -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
