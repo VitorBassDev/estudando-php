@@ -25,7 +25,8 @@
 
 interface Crud {
     // Declaração de métodos
-    public function create();
+    // Os métodos devem ser públicos e passar algum parâmetro se necessário
+    public function create($data);
     public function read();
     public function update();
     public function delete();
@@ -35,7 +36,7 @@ interface Crud {
 class Posts implements Crud {
 
     // A classe "Posts" é obrigada a ter estes métodos
-    public function create() {
+    public function create($data) {
         // lógica para criar um post
     }
     public function read() {
